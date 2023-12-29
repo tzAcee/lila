@@ -41,9 +41,23 @@ endif()
 project(${project_name})
 
 set(sources
+    drawable-elements/widgets/text-editor.cpp
+    app-content-manager.cpp
+    lila-app.cpp
     main.cpp)
-
-add_executable(${project_name} ${sources})
+  
+set(includes
+    drawable-elements/widgets/text-editor/text-editor-background.h
+    drawable-elements/widgets/text-editor/text-editor-line-display.h
+    drawable-elements/widgets/text-editor.h
+    drawable-elements/mouse-element.h
+    drawable-elements/text-editor-element.h
+    app-content-manager.h
+    drawable-element-base.h
+    idrawable-element.h
+    lila-app.h)
+    
+add_executable(${project_name} ${sources} ${includes})
 
 target_link_libraries(${project_name} PUBLIC raylib raylib_cpp)
 
