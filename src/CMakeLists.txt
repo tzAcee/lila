@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.6)
 set(project_name lila)
 
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # deps
 
 ## raylib
@@ -41,7 +44,7 @@ set(sources
     main.cpp)
 
 add_executable(${project_name} ${sources})
-set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 23)
+
 target_link_libraries(${project_name} PUBLIC raylib raylib_cpp)
 
 # Web Configurations
