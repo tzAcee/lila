@@ -53,7 +53,7 @@ auto lila::TextEditor::render_buffer() -> void
         return;
     }
 
-    static raylib::Font FONT("resources/test.fnt");
+    static raylib::Font FONT("resources/pixelplay.png");
     FONT.DrawText(_buffer, Vector2{get_offset_from_left_border(), TEXT_EDITOR_PADDING}, FONT.baseSize, EDIT_FONT_SPACING, EDITOR_ACCENT);
 
 

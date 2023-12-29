@@ -61,6 +61,9 @@ add_executable(${project_name} ${sources} ${includes})
 
 target_link_libraries(${project_name} PUBLIC raylib raylib_cpp)
 
+
+file(COPY ${CMAKE_SOURCE_DIR}/resources DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/resources)
+
 # Web Configurations
 if (${PLATFORM} STREQUAL "Web")
     # Tell Emscripten to build an example.html file.
